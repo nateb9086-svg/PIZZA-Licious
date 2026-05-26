@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import com.pluralsight.model.Pizza;
+
 import java.util.List;
 
 public class PizzaScreen {
@@ -18,7 +20,7 @@ public class PizzaScreen {
         int t = InputHelper.selectFromList("Select your type:", types, false);
         pizza.setType(Pizza.Type.values()[t]);
 
-        List<String> sizes = List.of("Small (8\") - $ 8.50", "Medium (12\") - $12.00", "Large (16\") - $16.50");
+        List<String> sizes = List.of("Personal (8\") - $ 8.50", "Medium (12\") - $12.00", "Large (16\") - $16.50");
 
 
 
