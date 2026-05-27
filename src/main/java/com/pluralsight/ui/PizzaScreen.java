@@ -7,7 +7,7 @@ import java.util.List;
 
 public class PizzaScreen {
 
-    public static buildPizza() {
+    public static Pizza buildPizza() {
 
         System.out.println("");
         System.out.println("It's time to build your Pizza");
@@ -36,8 +36,27 @@ public class PizzaScreen {
                 "\n Would you like stuffed crust?");
         pizza.setStuffedCrust(stuffed);
 
+        System.out.println("\n Pizza added!");
+        System.out.println(pizza);
+        return pizza;
 
+    }
 
+    private static void addToppingGroup(Pizza pizza, String groupName,
+                                        List<String> options,
+                                        java.util.function.Consumer<String> adder){
+        System.out.println("\n " + groupName + ": ");
+        for (int i = 0; i < options.size(); i++){
+            System.out.printf("  %d) %s&n", i + 1, options.get(i));
+        }
+        System.out.println("   0) Done");
 
+        while (true) {
+            int choice = InputHelper.readInt("  Select " + groupName + " (0 when done): ", 0, options.size());
+            if (choice == 0) break;
+            String name = options.get(choice - 1);
+            adder.accept(name);
+            System.out.println(" Added" + name + ". Select another or 0 to continue.");
+        }
     }
 }
