@@ -1,4 +1,4 @@
-package com.pluralsight;
+package com.pluralsight.ui;
 import java.util.Scanner;
 
 public class InputHelper {
@@ -44,9 +44,5 @@ public class InputHelper {
         int min = allowDone ? 0 : 1;
         return readInt (" Choice: ", min, max) - 1;
     }
-
-
-
-
 
 }

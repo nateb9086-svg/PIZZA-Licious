@@ -1,6 +1,5 @@
 package com.pluralsight.ui;
 
-import com.pluralsight.InputHelper;
 import com.pluralsight.OrderScreen;
 
 public class HomeScreen {
