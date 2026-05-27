@@ -11,8 +11,8 @@ public class Pizza implements OrderItem {
     private Size size;
     private Map<String, Integer> meats = new LinkedHashMap<>();
     private Map<String, Integer> cheeses = new LinkedHashMap<>();
-    private Map<String, Integer> toppings = new LinkedHashMap<>();
-    private Map<String, Integer> sauces = new LinkedHashMap<>();
+    private Set<String> toppings = new LinkedHashSet<>();
+    private Set<String> sauces = new LinkedHashSet<>();
     private boolean stuffedCrust;
 
     private static final Map<Size, Double> basePrice = Map.of(
@@ -34,7 +34,7 @@ public class Pizza implements OrderItem {
             "Mozzarella", "Parmesan", "Ricotta", "Goat Cheese", "Buffalo");
     public static final List<String> toppingOptions = List.of(
             "onions", "mushrooms", "bell peppers", "olives", "tomatoes", "spinach",
-            "olives", "tomatoes", "spinach", "basil", "pineapple", "anchovies");
+            "spinach", "basil", "pineapple", "anchovies");
     public static final List<String> sauceOptions = List.of(
             "marinara", "alfredo", "pesto", "bbq", "buffalo", "olive oil");
 
@@ -97,24 +97,23 @@ public class Pizza implements OrderItem {
         appendMappedToppings(sb, "cheeses", cheeses);
         appendSetToppings(sb, "Regular Toppings", toppings);
         appendSetToppings(sb, "Sauces", sauces);
-        sb.append(String.format("  Subtotal: $%.2f%n", getPrice()));
+        sb.append(String.format("  %-20s $%.2f%n", "Subtotal:", getPrice()));
         return sb.toString();
     }
 
     private void appendMappedToppings(StringBuilder sb, String label, Map<String, Integer> map){
 
         if (!map.isEmpty()) {
-            sb.append("    ").append(label).append(":  ");
+            //sb.append("    ").append(label).append(":  ");
             List<String> parts = new ArrayList<>();
             map.forEach((k,v) -> parts.add(v > 1 ? k + " x" + v : k));
-            sb.append(String.join(", ", parts)).append("\n");
+            sb.append(String.format(" %-20s %s%n", label + ":", String.join(", ", parts)));
         }
     }
 
     private void appendSetToppings(StringBuilder sb, String label, Set<String> set){
         if (!set.isEmpty()){
-            sb.append("   ").append(label).append(":  ")
-                    .append(String.join(", ", set)).append("\n");
+            sb.append(String.format(" %-20s %s%n", label + ":", String.join(", ", set)));
         }
     }
 

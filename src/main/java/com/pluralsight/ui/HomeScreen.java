@@ -1,10 +1,11 @@
 package com.pluralsight.ui;
 
-//import com.pluralsight.OrderScreen;
+import com.pluralsight.OrderScreen;
 
 public class HomeScreen {
 
     public static void run() {
+        printBanner();
         while (true) {
 
 

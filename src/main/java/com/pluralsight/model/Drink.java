@@ -15,7 +15,8 @@ public class Drink implements OrderItem{
         this.size = size;
         this.flavor = flavor;
     }
-    public double getPrices() {
+
+    public double getPrice() {
         return prices[size.ordinal()];
     }
 

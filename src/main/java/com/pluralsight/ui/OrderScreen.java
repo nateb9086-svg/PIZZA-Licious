@@ -4,6 +4,10 @@ package com.pluralsight;
 import com.pluralsight.model.*;
 import com.pluralsight.service.ReceiptService;
 import com.pluralsight.model.OrderItem;
+import com.pluralsight.ui.CheckOutScreen;
+import com.pluralsight.ui.DrinkScreen;
+import com.pluralsight.ui.InputHelper;
+import com.pluralsight.ui.PizzaScreen;
 
 public class OrderScreen {
 
@@ -19,14 +23,14 @@ public class OrderScreen {
                 case 2 -> order.addItem(DrinkScreen.buildDrink());
                 case 3 -> {
                     order.addItem(new GarlicKnots());
-                    System.out.println(" Garlic Knots added! ($1.50)")
+                    System.out.println(" Garlic Knots added! ($1.50)");
                 }
                 case 4 -> {
                     if (order.isEmpty()) {
                         System.out.println(" Your order is empty!");
                         break;
                     }
-                    boolean confirmed = CheckoutScreen.run(order);
+                    boolean confirmed = CheckOutScreen.run(order);
                     return confirmed;
                 }               // exit order loop
                 case 0 -> {
