@@ -1,6 +1,7 @@
 package com.pluralsight.ui;
 
 import com.pluralsight.model.Pizza;
+import com.pluralsight.model.Pizza.*;
 
 import java.util.List;
 

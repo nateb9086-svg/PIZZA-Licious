@@ -1,5 +1,7 @@
 package com.pluralsight.model;
+
 import java.util.*;
+
 public class Order {
     private static int nextId = 1;
 
