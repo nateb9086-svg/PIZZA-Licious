@@ -57,11 +57,11 @@ public class OrderScreen {
         }
 
         System.out.println("");
-        System.out.println("  1) Add Pizza");
-        System.out.println("  2) Add Drink");
-        System.out.println("  3) Add Garlic Knots   ($1.50)");
-        System.out.println("  4) Checkout");
-        System.out.println("  0) Cancel Order");
+        System.out.println("1) Add Pizza");
+        System.out.println("2) Add Drink");
+        System.out.println("3) Add Garlic Knots   ($1.50)");
+        System.out.println("4) Checkout");
+        System.out.println("0) Cancel Order");
         System.out.println("");
     }
 }

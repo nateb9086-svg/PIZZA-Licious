@@ -7,6 +7,9 @@ import java.io.IOException;
 
 public class CheckOutScreen {
 
+    public CheckOutScreen() {
+    }
+
     public static boolean run(Order order){
         System.out.println("");
         System.out.println(" CHECKOUT ");
@@ -18,6 +21,8 @@ public class CheckOutScreen {
                 double grandTotal = subtotal + tax;
         System.out.printf("  Tax (8%%): $%.2f%n", tax);
         System.out.printf(" GRAND TOTAL: $%.2f%n%n", grandTotal);
+
+
 
         System.out.println(" 1) Confirm Order");
         System.out.println(" 2) Cancel Order");
@@ -40,5 +45,6 @@ public class CheckOutScreen {
             System.out.println(" Order cancelled.");
             return false;
         }
+
     }
 }

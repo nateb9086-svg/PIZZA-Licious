@@ -13,7 +13,7 @@ public class ReceiptService {
     public static String writeReceipt(Order order) throws IOException {
         File dir = new File(receipts);
         if (!dir.exists()) dir.mkdirs();
-        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
+        String timestamp = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss"));
         String filename = String.format("%s/receipt_order%d_%s.txt", receipts, order.getId(), timestamp);
 
         try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {

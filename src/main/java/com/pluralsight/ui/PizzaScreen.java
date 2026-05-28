@@ -31,6 +31,7 @@ public class PizzaScreen {
         addToppingGroup(pizza, "Cheese", Pizza.cheeseOptions, pizza::addCheese);
         addToppingGroup(pizza, "Toppings", Pizza.toppingOptions, pizza::addTopping);
         addToppingGroup(pizza, "Sauces", Pizza.sauceOptions, pizza::addSauce);
+        addToppingGroup(pizza, "Sides", Pizza.sideOptions, pizza::addSides);
 
         boolean stuffed = InputHelper.readYesNo(
                 "\n Would you like stuffed crust?");

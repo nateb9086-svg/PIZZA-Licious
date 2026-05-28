@@ -13,6 +13,7 @@ public class Pizza implements OrderItem {
     private Map<String, Integer> cheeses = new LinkedHashMap<>();
     private Set<String> toppings = new LinkedHashSet<>();
     private Set<String> sauces = new LinkedHashSet<>();
+    private Set<String> sides = new LinkedHashSet<>();
     private boolean stuffedCrust;
 
     private static final Map<Size, Double> basePrice = Map.of(
@@ -37,6 +38,8 @@ public class Pizza implements OrderItem {
             "spinach", "basil", "pineapple", "anchovies");
     public static final List<String> sauceOptions = List.of(
             "marinara", "alfredo", "pesto", "bbq", "buffalo", "olive oil");
+    public static final List<String> sideOptions = List.of(
+            "red peppers", "parmesan");
 
 
     public Type getType() {
@@ -67,6 +70,7 @@ public class Pizza implements OrderItem {
     public void addCheese(String c) {cheeses.merge(c, 1, Integer::sum); }
     public void addTopping(String t) {toppings.add(t);}
     public void addSauce(String s) {sauces.add(s);}
+    public void addSides(String si) {sides.add(si);}
 
     public double getPrice() {
         double price = basePrice.get(size);
@@ -97,6 +101,7 @@ public class Pizza implements OrderItem {
         appendMappedToppings(sb, "cheeses", cheeses);
         appendSetToppings(sb, "Regular Toppings", toppings);
         appendSetToppings(sb, "Sauces", sauces);
+        appendSetToppings(sb, "Sides", sides);
         sb.append(String.format("  %-20s $%.2f%n", "Subtotal:", getPrice()));
         return sb.toString();
     }
