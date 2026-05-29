@@ -1,0 +1,56 @@
+WELCOME TO THE PIZZALICIOUS APP 
+ 
+
+A quick streamline way of ordering New Pittsburgh, Nebraska’s favorite pizza parlor. 
+
+HOME SCREEN 
+
+You will start off at the home screen where you have the option to add a new order or exit the app.  
+
+You can make the actions run by selecting the number or letter adjacent to the option. 
+
+When you hit “exit” the app will close immediately but if you put in the “add order” option, you will enter the order screen. 
+
+
+ORDER SCREEN 
+
+When entering the Order Screen, you will be given 5 options where you can add a pizza, a drink, 
+garlic knots, check out, or cancel order. 
+
+“Add Pizza”, and “Add Drink” will take you to a new screen while “Add Garlic Knots” will only take place on the
+Order Screen and will add to the charge. 
+
+If you enter the “Checkout” option, you will enter the Checkout Screen unless you haven't 
+ordered anything in which case you will be told the order is empty and be returned to the Order Screen.  
+
+If you cancel the order, you will be asked if you're sure you want to cancel where you can hit either y/n for “Yes or No”
+
+
+PIZZA SCREEN 
+
+Once you enter the pizza screen, you will be prompted to pick the crust type, the size of your pizza, the meat,
+the cheese, your nonmeat toppings, sauces, sides, and be asked if you would like stuffed crust pizza.
+
+
+Every choice is optional except for the crust type, cheese type, and stuffed crust yes or no question. 
+
+Once you put in all the options, you will be given the price of your current order and the total price 
+of previous things added to your order and get returned to the order screen. 
+
+
+DRINK SCREEN 
+
+You will be asked the size of your drink. 
+Afterwards, you will be asked for the flavor you would like. 
+
+Just like the end of the pizza screen, you will then be given the price of your current purchase and the total
+price of previous things added to your order and get returned to the order screen. 
+
+
+CHECKOUT SCREEN 
+
+Once you enter the Checkout Screen, you will be given the individual purchases and your total and be asked to 
+confirm order or cancel order.  
+
+If you cancel, you will be taken back to the home screen but if you confirm, a file will be created with your receipt 
+(It won’t be created immediately, and you will be sent back to the home screen.  
