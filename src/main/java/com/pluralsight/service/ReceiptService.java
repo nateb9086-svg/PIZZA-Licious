@@ -10,6 +10,8 @@ public class ReceiptService {
 
     private static final String receipts = "receipts";
 
+
+
     public static String writeReceipt(Order order) throws IOException {
         File dir = new File(receipts);
         if (!dir.exists()) dir.mkdirs();
@@ -18,7 +20,7 @@ public class ReceiptService {
 
         try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {
             pw.println("");
-            pw.println("Your PIZZALICIOUS RECEIPT");
+            pw.println("YOUR PIZZALICIOUS RECEIPT");
             pw.println("");
             pw.println("Date: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm a")));
             pw.println("");

@@ -17,10 +17,10 @@ public class CheckOutScreen {
         System.out.print(order.getSummary());
 
         double subtotal = order.getTotal();
-        double tax = subtotal * 0.08;
-                double grandTotal = subtotal + tax;
-        System.out.printf("  Tax (8%%): $%.2f%n", tax);
-        System.out.printf(" GRAND TOTAL: $%.2f%n%n", grandTotal);
+       // double tax = subtotal * 0.08;
+        //        double grandTotal = subtotal + tax;
+       // System.out.printf("  Tax (8%%): $%.2f%n", tax);
+       // System.out.printf(" GRAND TOTAL: $%.2f%n%n", grandTotal);
 
 
 
