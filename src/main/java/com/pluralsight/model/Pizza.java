@@ -30,16 +30,16 @@ public class Pizza implements OrderItem {
 
 
     public static final List<String> meatOptions = List.of(
-            "pepperoni", "sausage", "ham", "bacon", "chicken", "meatball");
+            "Pepperoni", "Sausage", "Ham", "Bacon", "Chicken", "Meatball");
     public static final List<String> cheeseOptions = List.of(
             "Mozzarella", "Parmesan", "Ricotta", "Goat Cheese", "Buffalo");
     public static final List<String> toppingOptions = List.of(
-            "onions", "mushrooms", "bell peppers", "olives", "tomatoes", "spinach",
-            "spinach", "basil", "pineapple", "anchovies");
+            "Onions", "Mushrooms", "Bell Peppers", "Olives", "Tomatoes", "Spinach",
+            "Basil", "Pineapple", "Anchovies");
     public static final List<String> sauceOptions = List.of(
-            "marinara", "alfredo", "pesto", "bbq", "buffalo", "olive oil");
+            "Marinara", "Alfredo", "Pesto", "BBQ", "Buffalo", "Olive Oil");
     public static final List<String> sideOptions = List.of(
-            "red peppers", "parmesan");
+            "Red peppers", "Parmesan");
 
 
     public Type getType() {

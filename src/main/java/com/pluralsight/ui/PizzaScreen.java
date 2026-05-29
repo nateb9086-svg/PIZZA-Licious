@@ -16,14 +16,14 @@ public class PizzaScreen {
         Pizza pizza = new Pizza();
 
 
-        List<String> types = List.of("Thin Crust", "Regular Crust", "Thick Crust", "cauliflower");
+        List<String> types = List.of("Thin Crust", "Regular Crust", "Thick Crust", "Cauliflower");
 
         int t = InputHelper.selectFromList("Select your type:", types, false);
         pizza.setType(Pizza.Type.values()[t]);
 
         List<String> sizes = List.of("Personal (8\") - $ 8.50", "Medium (12\") - $12.00", "Large (16\") - $16.50");
 
-        int s = InputHelper.selectFromList("Pizza size:", sizes, false);
+        int s = InputHelper.selectFromList("Pizza Size:", sizes, false);
         pizza.setSize(Pizza.Size.values()[s]);
 
         System.out.println("\n Toppings");
@@ -57,7 +57,7 @@ public class PizzaScreen {
             if (choice == 0) break;
             String name = options.get(choice - 1);
             adder.accept(name);
-            System.out.println(" Added " + name + ". Select another or 0 to continue.");
+            System.out.println(" Added " + name + ".\n Select another or 0 to continue.");
         }
     }
 }

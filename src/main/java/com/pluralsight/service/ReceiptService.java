@@ -18,7 +18,7 @@ public class ReceiptService {
 
         try (PrintWriter pw = new PrintWriter(new FileWriter(filename))) {
             pw.println("");
-            pw.println("Your Pizza-Licious RECEIPT");
+            pw.println("Your PIZZALICIOUS RECEIPT");
             pw.println("");
             pw.println("Date: " + LocalDateTime.now().format(DateTimeFormatter.ofPattern("MM/dd/yyyy hh:mm a")));
             pw.println("");

@@ -33,8 +33,8 @@ public class CheckOutScreen {
             try {
                 String path = ReceiptService.writeReceipt(order);
 
-                System.out.println("\n Order confirmed!");
-                System.out.println(" Receipt saved to: " + path);
+                System.out.println("\n Order Confirmed!");
+                System.out.println(" Receipt Saved to: " + path);
             }
             catch (IOException e){
                 System.out.println("  Could not write receipt: " + e.getMessage());
@@ -42,7 +42,7 @@ public class CheckOutScreen {
             return true;
         }
         else {
-            System.out.println(" Order cancelled.");
+            System.out.println(" Order Cancelled.");
             return false;
         }
 

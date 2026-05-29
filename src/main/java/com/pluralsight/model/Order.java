@@ -38,7 +38,7 @@ public class Order {
         sb.append(String.format("ORDER #%d%n", id));
         sb.append(String.format(""));
         if (items.isEmpty()){
-            sb.append(" (no items)%n".formatted());
+            sb.append(" (No Items)%n".formatted());
         }
         else {
             for (Object item : items) {
